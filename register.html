@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kishan E-Kart - Register</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="auth-page-wrapper">
+        <img src="images/farm-banner.jpg" alt="Farm Background" class="auth-bg-img">
+        <div class="auth-screen-overlay"></div>
+
+        <div class="auth-main-container">
+            
+            <div class="auth-left-brand">
+                <div class="brand">
+                    <img src="images/logo.png" alt="Logo" class="logo-img">
+                    <h1>KISHAN<br><span>E-KART</span></h1>
+                </div>
+                <div class="tagline-box">
+                    <p class="tagline">Buy | Sell | Rent</p>
+                    <p class="sub-tagline">Everything for Farmers</p>
+                </div>
+            </div>
+
+            <div class="auth-floating-card">
+                <h2>Create <span class="highlight">Account</span></h2>
+                <p class="card-subtext">Join Kishan E-Kart and start your journey</p>
+
+                <form id="registerForm">
+                    <div class="input-group-custom">
+                        <label>Full Name</label>
+                        <div class="input-field-wrapper">
+                            <span class="input-icon">👤</span>
+                            <input type="text" id="regName" placeholder="Enter your full name" required>
+                        </div>
+                    </div>
+
+                    <div class="input-group-custom">
+                        <label>Mobile Number</label>
+                        <div class="input-field-wrapper">
+                            <span class="input-icon">📱</span>
+                            <input type="tel" id="regMobile" placeholder="Enter your mobile number" required>
+                        </div>
+                    </div>
+
+                    <div class="input-group-custom">
+                        <label>Password</label>
+                        <div class="input-field-wrapper">
+                            <span class="input-icon">🔒</span>
+                            <input type="password" id="regPassword" placeholder="Create a password" required>
+                        </div>
+                    </div>
+
+                    <div class="input-group-custom">
+                        <label>Confirm Password</label>
+                        <div class="input-field-wrapper">
+                            <span class="input-icon">✅</span>
+                            <input type="password" id="regConfirmPassword" placeholder="Confirm your password" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="auth-solid-btn">🌾 REGISTER</button>
+                </form>
+
+                <div class="or-divider"><span>or</span></div>
+
+                <p class="switch-auth-custom">Already have an account? <a href="index.html">Login</a></p>
+            </div>
+
+        </div>
+
+        <div class="auth-footer-badges">
+            <div class="badge-item"><span class="badge-icon">🛡️</span> <div><h4>100% Secure</h4><p>Safe & trusted platform</p></div></div>
+            <div class="badge-item"><span class="badge-icon">🌾</span> <div><h4>Quality Products</h4><p>Best for your farm</p></div></div>
+            <div class="badge-item"><span class="badge-icon">🚚</span> <div><h4>Fast Delivery</h4><p>At your doorstep</p></div></div>
+            <div class="badge-item"><span class="badge-icon">📞</span> <div><h4>24/7 Support</h4><p>We're here to help</p></div></div>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,1273 @@
+/* ==========================================================================
+   1. GLOBAL STYLES & VARIABLES (બધા પેજ માટે કોમન સેટિંગ્સ)
+   ========================================================================== */
+:root {
+    --primary-color: #1b4d3e;
+    --secondary-color: #2c6b56;
+    --bg-light: #f4f6f5;
+    --white: #ffffff;
+    --text-dark: #2d3748;
+    --text-muted: #718096;
+    --border-color: #e2e8f0;
+    --accent-orange: #dd6b20;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    --radius: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ==========================================================================
+   2. AUTH PAGES (નવો ફૂલ-સ્ક્રીન સિનેમેટિક અને ગ્લાસમોડર્ન લુક)
+   ========================================================================== */
+.auth-page-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-x: hidden;
+    background-color: #0f2a24;
+}
+
+/* ફુલ સ્ક્રીન બેકગ્રાઉન્ડ ફોટો સેટિંગ */
+.auth-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* ફોટા પર ડાર્ક ગ્રીન પ્રીમિયમ ગ્રેડિયન્ટ ઓવરલે */
+.auth-screen-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(15, 42, 36, 0.9) 0%, rgba(22, 62, 50, 0.65) 100%);
+    z-index: 1;
+}
+
+/* મુખ્ય કન્ટેનર */
+.auth-main-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    width: 100%;
+    margin: auto;
+    padding: 40px 50px;
+    gap: 50px;
+}
+
+/* ડાબી બાજુનું કન્ટેન્ટ */
+.auth-left-brand {
+    color: #ffffff;
+    flex: 1;
+}
+
+.auth-left-brand .brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 24px;
+}
+
+.auth-left-brand .logo-img {
+    height: 75px;
+    width: auto;
+    object-fit: contain;
+}
+
+.auth-left-brand h1 {
+    font-size: 2.5rem;
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+}
+
+.auth-left-brand h1 span {
+    font-weight: 300;
+    color: #ecc94b; /* E-KART ગોલ્ડન */
+}
+
+.tagline-box {
+    border-left: 3px solid #ecc94b;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.tagline-box .tagline {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.tagline-box .sub-tagline {
+    font-size: 1.1rem;
+    opacity: 0.8;
+    margin-top: 5px;
+}
+
+/* 🔥 જમણી બાજુનું ટ્રાન્સપરન્ટ ગ્લાસ ફ્લોટિંગ કાર્ડ (Glassmorphism) */
+.auth-floating-card {
+    background: rgba(15, 42, 36, 0.5); /* ટ્રાન્સપરન્ટ ડાર્ક ગ્રીન */
+    backdrop-filter: blur(16px); /* ગ્લાસ જેવી બ્લર ઇફેક્ટ */
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    padding: 45px 40px;
+    width: 480px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+}
+
+.auth-floating-card h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.auth-floating-card h2 .highlight {
+    color: #ecc94b; /* ગોલ્ડન હાઇલાઇટ */
+}
+
+.card-subtext {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.95rem;
+    margin-bottom: 35px;
+}
+
+/* ઇનપુટ ફિલ્ડ્સ સેટિંગ્સ */
+.input-group-custom {
+    margin-bottom: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-group-custom label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.input-field-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    position: absolute;
+    left: 15px;
+    font-size: 1.1rem;
+    opacity: 0.7;
+}
+
+.input-field-wrapper input {
+    width: 100%;
+    padding: 14px 16px 14px 45px; /* આઇકોન માટે ડાબી બાજુથી જગ્યા છોડી */
+    background: rgba(255, 255, 255, 0.07);
+    border: 1.5px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #ffffff;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.input-field-wrapper input::placeholder {
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.input-field-wrapper input:focus {
+    border-color: #ecc94b;
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 0 0 4px rgba(236, 201, 75, 0.15);
+}
+
+/* ઓપ્શન્સ અને લિંક્સ */
+.form-options-custom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
+
+.remember-me-custom {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.remember-me-custom input {
+    accent-color: #ecc94b;
+    width: 15px; height: 15px;
+}
+
+.forgot-pass-custom {
+    color: #ecc94b;
+    font-weight: 600;
+}
+
+/* સોલિડ મોડર્ન ગોલ્ડન બટન */
+.auth-solid-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #ecc94b;
+    color: #152a24;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 15px rgba(236, 201, 75, 0.2);
+}
+
+.auth-solid-btn:hover {
+    background-color: #f6e05e;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(236, 201, 75, 0.35);
+}
+
+/* ઓર ડિવાઇડર */
+.or-divider {
+    text-align: center;
+    margin: 25px 0;
+    position: relative;
+}
+.or-divider::before {
+    content: ''; position: absolute; top: 50%; left: 0; width: 100%; height: 1px;
+    background: rgba(255, 255, 255, 0.15); z-index: 1;
+}
+.or-divider span {
+    position: relative; z-index: 2; background: #1f3f37;
+    padding: 0 15px; color: rgba(255, 255, 255, 0.4); font-size: 0.85rem;
+    border-radius: 50%;
+}
+
+.switch-auth-custom {
+    text-align: center;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.switch-auth-custom a {
+    color: #ecc94b;
+    font-weight: 700;
+}
+
+/* 🌟 બોટમ ટ્રસ્ટ બેજીસ (Footer રો) */
+.auth-footer-badges {
+    position: relative;
+    z-index: 2;
+    background: rgba(10, 30, 25, 0.8);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 20px 50px;
+    width: 100%;
+}
+
+.badge-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #ffffff;
+}
+
+.badge-icon {
+    font-size: 1.8rem;
+    color: #ecc94b;
+}
+
+.badge-item h4 { font-size: 1rem; font-weight: 600; margin-bottom: 2px; }
+.badge-item p { font-size: 0.8rem; color: rgba(255, 255, 255, 0.6); }
+
+/* ==========================================================================
+   📱 RESPONSIVE MEDIA QUERIES (મોબાઈલ અને ટેબલેટ માટે ઓટો-એડજસ્ટ)
+   ========================================================================== */
+@media (max-width: 992px) {
+    .auth-main-container { flex-direction: column; text-align: center; padding: 40px 20px; }
+    .auth-left-brand .brand { justify-content: center; }
+    .tagline-box { border-left: none; padding-left: 0; }
+    .auth-floating-card { width: 100%; max-width: 460px; padding: 35px 25px; }
+    .auth-footer-badges { grid-template-columns: repeat(2, 1fr); gap: 20px; padding: 25px 20px; }
+}
+
+@media (max-width: 550px) {
+    .auth-footer-badges { grid-template-columns: 1fr; gap: 15px; text-align: left; }
+    .auth-left-brand h1 { font-size: 2rem; }
+    .tagline-box .tagline { font-size: 1.4rem; }
+}
+/* ==========================================================================
+   3. MAIN HEADER (બધા ઇન-એપ પેજીસ માટે કોમન નેવબાર)
+   ========================================================================== */
+.main-header {
+    background-color: var(--white);
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--primary-color);
+}
+
+.header-logo h2 {
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+}
+
+.search-bar-container {
+    display: flex;
+    width: 40%;
+    max-width: 500px;
+}
+
+.search-bar-container input {
+    flex: 1;
+    padding: 10px 16px;
+    border: 1.5px solid var(--border-color);
+    border-right: none;
+    border-radius: var(--radius) 0 0 var(--radius);
+    outline: none;
+}
+
+.search-btn {
+    padding: 10px 16px;
+    background-color: var(--bg-light);
+    border: 1.5px solid var(--border-color);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    font-weight: 500;
+}
+
+.nav-links a {
+    color: var(--text-muted);
+    padding: 8px 0;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* ==========================================================================
+   4. HOME PAGE DESIGN (નવો પ્રોફેસનલ અને ક્લીન વ્હાઇટ થીમ લેઆઉટ)
+   ========================================================================== */
+.home-main-wrapper {
+    max-width: 1300px;
+    margin: 30px auto 60px;
+    padding: 0 30px;
+}
+
+/* પ્રીમિયમ ફુલ-વાઇડ બેનર સેટિંગ */
+.premium-hero-banner {
+    position: relative;
+    width: 100%;
+    height: 420px; /* પરફેક્ટ સિનેમેટિક હાઇટ */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+}
+
+.banner-background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* ડાબી બાજુથી સોફ્ટ ડાર્ક ગ્રેડિયન્ટ જેથી વ્હાઇટ લખાણ મસ્ત રીતે વંચાય */
+.banner-left-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(15, 42, 36, 0.85) 0%, rgba(15, 42, 36, 0.4) 60%, transparent 100%);
+    z-index: 1;
+}
+
+/* બેનરની અંદરનું લખાણ સેટિંગ */
+.banner-inner-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 60px;
+    color: var(--white);
+    max-width: 650px;
+}
+
+.banner-inner-content h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+.banner-inner-content .subtitle {
+    font-size: 1.25rem;
+    opacity: 0.95;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+/* ૩ સર્વિસ કાર્ડ્સનું ગ્રીડ સેટિંગ */
+.clean-services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px; /* બેનરની નીચે બરાબર સ્પેસિંગ */
+}
+
+.service-main-card {
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border-color);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* કાર્ડ પર માઉસ લઈ જતા સ્મૂથ ઇફેક્ટ */
+.service-main-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card-img-holder {
+    height: 220px;
+    width: 100%;
+    background-color: #e2e8f0;
+}
+
+.card-img-holder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* કાર્ડની અંદરની માહિતી અને બટન */
+.card-main-info {
+    padding: 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.card-main-info h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.card-main-info p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+/* સોલિડ ડાર્ક ગ્રીન બટન */
+.card-solid-action-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: var(--white) !important;
+    text-align: center;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.card-solid-action-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* 📱 ટેબ્લેટ અને મોબાઈલ માટે રિસ્પોન્સિવ લેઆઉટ ઓટો-એડજસ્ટ */
+@media (max-width: 992px) {
+    .home-main-wrapper { padding: 0 20px; margin: 20px auto; }
+    .premium-hero-banner { height: 320px; }
+    .banner-left-overlay { width: 100%; background: linear-gradient(180deg, rgba(15, 42, 36, 0.85) 0%, rgba(15, 42, 36, 0.6) 100%); }
+    .banner-inner-content { padding: 0 30px; text-align: center; max-width: 100%; }
+    .banner-inner-content h1 { font-size: 2.2rem; }
+    .clean-services-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+}
+
+@media (max-width: 650px) {
+    .clean-services-grid { grid-template-columns: 1fr; } /* મોબાઈલમાં એક લાઈનમાં એક જ કાર્ડ */
+    .premium-hero-banner { height: 260px; }
+    .banner-inner-content h1 { font-size: 1.8rem; }
+    .banner-inner-content .subtitle { font-size: 1rem; }
+}
+/* ==========================================================================
+   5. TWO-COLUMN LAYOUT (Buy, Sell, Rent સાઇડબાર)
+   ========================================================================== */
+.layout-container {
+    display: flex;
+    max-width: 1400px;
+    margin: 30px auto;
+    padding: 0 40px;
+    gap: 40px;
+}
+
+.sidebar-menu {
+    width: 260px;
+    background-color: var(--white);
+    padding: 30px 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    height: fit-content;
+}
+
+.sidebar-menu h3 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+.sidebar-menu ul {
+    list-style: none;
+}
+
+.sidebar-menu ul li {
+    margin-bottom: 8px;
+}
+
+.sidebar-menu ul li a {
+    display: block;
+    padding: 12px 15px;
+    border-radius: var(--radius);
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.sidebar-menu ul li a:hover,
+.sidebar-menu ul li a.active {
+    background-color: rgba(27, 77, 62, 0.08);
+    color: var(--primary-color);
+}
+
+.content-area {
+    flex: 1;
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+/* Categories Grid */
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.category-box {
+    background-color: var(--white);
+    padding: 30px 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.category-box:hover {
+    transform: translateY(-4px);
+}
+
+.category-box .img-box {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.category-box p {
+    font-weight: 600;
+}
+
+/* Products Grid */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.product-card {
+    background-color: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-img-holder {
+    background-color: #e2e8f0;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+}
+
+.product-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.product-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.product-price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--accent-orange);
+}
+
+.add-to-cart-btn,
+.view-details-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: var(--radius);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.add-to-cart-btn:hover,
+.view-details-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* ==========================================================================
+   6. PRODUCT DETAILS PAGE DESIGN
+   ========================================================================== */
+.breadcrumb {
+    max-width: 1400px;
+    margin: 20px auto 0;
+    padding: 0 40px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.breadcrumb a {
+    color: var(--primary-color);
+}
+
+.details-container {
+    display: flex;
+    max-width: 1400px;
+    margin: 20px auto 40px;
+    padding: 0 40px;
+    gap: 50px;
+}
+
+.details-image-section {
+    flex: 1;
+}
+
+.big-img-holder {
+    background-color: var(--white);
+    height: 400px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8rem;
+}
+
+.details-info-section {
+    flex: 1;
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.details-info-section h1 {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.rating {
+    margin-bottom: 20px;
+    color: #ecc94b;
+}
+
+.reviews-count {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-left: 10px;
+}
+
+.price-tag {
+    font-size: 2rem;
+    color: var(--accent-orange);
+    margin-bottom: 20px;
+}
+
+.description {
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.stock-status span {
+    color: #38a169;
+    font-weight: 600;
+}
+
+.purchase-actions {
+    margin-top: 30px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 25px;
+}
+
+.quantity-box {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.quantity-box input {
+    width: 70px;
+    padding: 8px;
+    border: 1.5px solid var(--border-color);
+    border-radius: var(--radius);
+    text-align: center;
+}
+
+.btn-group {
+    display: flex;
+    gap: 20px;
+}
+
+.add-cart-btn,
+.buy-now-btn {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    border-radius: var(--radius);
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+}
+
+.add-cart-btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.buy-now-btn {
+    background-color: var(--accent-orange);
+    color: var(--white);
+}
+
+/* ==========================================================================
+   7. TABLES & FORMS (My Listings & Add Listing - એકદમ પ્રોપર કમ્પ્લીટ લુક)
+   ========================================================================== */
+.add-new-btn {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--white) !important;
+    border-radius: var(--radius);
+    font-weight: 600;
+}
+
+.table-container {
+    background-color: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow-x: auto;
+}
+
+.listings-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    min-width: 600px;
+}
+
+.listings-table th, .listings-table td {
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.listings-table th {
+    background-color: rgba(27, 77, 62, 0.04);
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.status-active {
+    background-color: #e6fffa;
+    color: #234e52;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.edit-btn, .delete-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-right: 5px;
+}
+
+.edit-btn { background-color: #e2e8f0; color: var(--text-dark); }
+.delete-btn { background-color: #fed7d7; color: #9b2c2c; }
+
+/* 🌟 ફોર્મ બોક્સનું નવું સુવ્યવસ્થિત પ્રોફેશનલ ફોર્મેટ */
+.listing-form {
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    margin-top: 20px;
+    border: 1px solid var(--border-color);
+}
+
+.form-grid {
+    display: flex;
+    gap: 40px;
+}
+
+.form-left, .form-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px; /* દરેક ઇનપુટ વચ્ચે મસ્ત સ્પેસિંગ */
+}
+
+/* લેબલ હંમેશા ફિલ્ડની ઉપર જ સેટ થશે (Strict Vertical Stack) */
+.listing-form .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 0;
+}
+
+.listing-form .input-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+/* ⚡ બધા જ ઇનપુટ્સ, ડ્રોપડાઉન અને ટેક્સ્ટએરિયા ને ફુલ-વાઇડ ફોર્મેટ આપ્યું */
+.listing-form input[type="text"],
+.listing-form input[type="number"],
+.listing-form select,
+.listing-form textarea {
+    width: 100% !important; /* ફોર્મની બહાર ફિલ્ડ્સ નહીં જાય */
+    padding: 12px 16px;
+    border: 1.5px solid var(--border-color);
+    border-radius: var(--radius);
+    font-size: 1rem;
+    color: var(--text-dark);
+    background-color: #f8fafc; /* આધુનિક લાઇટ બેકગ્રાઉન્ડ */
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+/* ફાઇલ અપલોડ બટન માટે પ્રીમિયમ લુક */
+.listing-form input[type="file"] {
+    width: 100% !important;
+    padding: 10px 14px;
+    background-color: #f8fafc;
+    border: 1.5px dashed var(--border-color); /* ડૅશ્ડ બોર્ડર લુક */
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+
+.listing-form input:focus,
+.listing-form select:focus,
+.listing-form textarea:focus {
+    border-color: var(--primary-color);
+    background-color: var(--white);
+    box-shadow: 0 0 0 3px rgba(27, 77, 62, 0.1);
+}
+
+/* સબમિટ બટનની જોરદાર ડિઝાઇન */
+.submit-btn {
+    margin-top: 10px;
+    padding: 14px 40px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 10px rgba(27, 77, 62, 0.15);
+}
+
+.submit-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(27, 77, 62, 0.25);
+}
+/* ==========================================================================
+   8. MEDIA QUERIES (ટેબ્લેટ અને મોબાઈલ માટેનો જાદુઈ કોડ)
+   ========================================================================== */
+
+/* 📱 TABLET VIEW (સ્ક્રીન 992px થી નાની હોય ત્યારે) */
+@media (max-width: 992px) {
+    .main-header {
+        padding: 15px 20px;
+    }
+
+    .search-bar-container {
+        width: 100%;
+        order: 3;
+        /* સર્ચ બારને નીચે લઈ જશે */
+    }
+
+    .layout-container {
+        flex-direction: column;
+        /* સાઇડબાર અને મેઇન કન્ટેન્ટ ઉપર-નીચે થઈ જશે */
+        padding: 0 20px;
+        gap: 20px;
+    }
+
+    .sidebar-menu {
+        width: 100%;
+        /* સાઇડબાર આખો આડો થઈ જશે */
+    }
+
+    .sidebar-menu ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .sidebar-menu ul li {
+        margin-bottom: 0;
+    }
+
+    .categories-grid {
+        grid-template-columns: repeat(3, 1fr);
+        /* 4 ની જગ્યાએ 3 કોલમ */
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 3 ની જગ્યાએ 2 કોલમ */
+    }
+
+    .details-container {
+        flex-direction: column;
+        padding: 0 20px;
+        gap: 30px;
+    }
+
+    .form-grid {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* 📱 TABLET VIEW */
+@media (max-width: 992px) {
+    .main-header {
+        padding: 15px 20px;
+    }
+
+    .search-bar-container {
+        width: 100%;
+        order: 3;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 40px 20px;
+        height: 100%;
+    }
+
+    .services-main-grid {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: -60px;
+    }
+
+    .hero-front-img {
+        max-width: 350px;
+    }
+
+    .card-img {
+        height: 180px;
+    }
+}
+
+/* 📱 MOBILE VIEW */
+@media (max-width: 600px) {
+    .auth-container {
+        flex-direction: column;
+    }
+
+    .main-header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .nav-links {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-front-img {
+        max-width: 250px;
+    }
+
+    .services-main-grid {
+        grid-template-columns: 1fr;
+        margin-top: -40px;
+    }
+
+    .card-img {
+        height: 160px;
+    }
+}
+
+/* ==========================================================================
+   9. LOADING PRE-LOADER ANIMATION DESIGN
+   ========================================================================== */
+/* ==========================================================================
+   9. LOADING PRE-LOADER ANIMATION DESIGN (નવો સોલિડ અને યુનિક લુક)
+   ========================================================================== */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader-content {
+    text-align: center;
+}
+
+/* પ્લાન્ટ આઇકોનનું પલ્સ એનિમેશન */
+.loader-icon-wrapper {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 24px;
+    animation: pulseSprout 2s infinite ease-in-out;
+}
+
+.loader-svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* સોલિડ મોડર્ન પ્રોગ્રેસ બાર */
+.loader-bar-container {
+    width: 160px;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 2px;
+    margin: 0 auto 16px;
+    overflow: hidden;
+    position: relative;
+}
+
+.loader-progress-bar {
+    width: 100%;
+    height: 100%;
+    background-color: #ecc94b;
+    /* પ્રીમિયમ ગોલ્ડ કલર લાઇન */
+    border-radius: 2px;
+    transform: translateX(-100%);
+    animation: loadProgress 1.6s infinite ease-in-out;
+}
+
+.loader-text {
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    opacity: 0.75;
+}
+
+/* એનિમેશન કી-ફ્રેમ્સ */
+@keyframes pulseSprout {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: scale(1.12);
+        opacity: 1;
+    }
+}
+
+@keyframes loadProgress {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    50% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* ==========================================================================
+   10. LOGO & AUTH ILLUSTRATION IMAGES (UPDATED FOR BOLD & BIG LOOK)
+   ========================================================================== */
+/* મુખ્ય હેડર (Navbar) માં લોગો માટે */
+.logo-img {
+    height: 65px;
+    /* પહેલા 40px હતું, હવે વધારીને 65px કર્યું જેથી એકદમ પ્રોપર દેખાય */
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.05));
+    /* લોગોને હલકો ઉઠાવ આપવા માટે */
+    transition: transform 0.2s ease;
+}
+
+/* લોગો પર માઉસ લઈ જતાં સ્મૂથ ઇફેક્ટ */
+.logo-img:hover {
+    transform: scale(1.05);
+}
+
+/* લોગિન અને રજીસ્ટર પેજની ડાબી બાજુની પેનલમાં લોગો */
+.auth-sidebar .logo-img {
+    height: 95px;
+    /* પહેલા 55px હતું, હવે મોટો અને પ્રીમિયમ બ્રાન્ડેડ આઇકોન લાગશે */
+    margin-bottom: 5px;
+}
+
+/* લોગિન/રજીસ્ટર પેજની નીચેની લાઇન-આર્ટ ઇમેજ માટે */
+.auth-vector-img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    margin: 20px auto 0;
+    display: block;
+    opacity: 0.95;
+    object-fit: contain;
+}
+
+/* 📱 મોબાઈલ અને નાની સ્ક્રીન માટે લોગો સાઇઝ ઓટો-એડજસ્ટ */
+@media (max-width: 600px) {
+    .logo-img {
+        height: 50px;
+        /* મોબાઈલના હેડર પ્રમાણે પરફેક્ટ સાઇઝ */
+    }
+
+    .auth-sidebar .logo-img {
+        height: 80px;
+        /* મોબાઈલમાં લોગિન પેજ પર સાઇઝ */
+    }
+
+    .auth-vector-img {
+        max-width: 220px;
+    }
+}

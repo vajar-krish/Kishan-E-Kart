@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kishan E-Kart - Home</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loader-icon-wrapper">
+                <svg class="loader-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M32 60V34M32 34C32 26 24 20 14 22C14 22 18 32 32 34ZM32 34C32 24 42 16 52 16C52 16 50 28 32 34Z" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="loader-bar-container">
+                <div class="loader-progress-bar"></div>
+            </div>
+            <p class="loader-text">KISHAN E-KART</p>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="header-logo">
+            <img src="images/logo.png" alt="Logo" class="logo-img">
+            <h2>KISHAN E-KART</h2>
+        </div>
+        <div class="search-bar-container">
+            <input type="text" placeholder="સર્વિસ, સાધનો, ઉત્પાદનો શોધો...">
+            <button class="search-btn">🔍</button>
+        </div>
+        <nav class="nav-links">
+            <a href="home.html" class="active">હોમ</a>
+            <a href="categories.html">خરીદો</a>
+            <a href="my-listings.html">વેચો</a>
+            <a href="rent.html">ભાડે લો</a>
+            <a href="#" id="logoutBtn">લોગઆઉટ</a>
+        </nav>
+    </header>
+
+    <main class="home-main-wrapper">
+        
+        <section class="premium-hero-banner">
+            <img src="images/farm-banner.png" alt="Farm Banner" class="banner-background-image">
+            <div class="banner-left-overlay"></div> <div class="banner-inner-content">
+                <h1>તમારું સ્વાગત છે!</h1>
+                <p class="subtitle">ખરીદો, વેચો અને ભાડે લો - ખેડૂતો માટે બધું જ એક જગ્યાએ.</p>
+            </div>
+        </section>
+
+        <section class="clean-services-grid">
+            
+            <div class="service-main-card">
+                <div class="card-img-holder">
+                    <img src="images/wheat.png" alt="ખરીદો">
+                </div>
+                <div class="card-main-info">
+                    <h3>ખરીદો</h3>
+                    <p>ઉત્પાદનો ખરીદો</p>
+                    <a href="categories.html" class="card-solid-action-btn">જુઓ</a>
+                </div>
+            </div>
+
+            <div class="service-main-card">
+                <div class="card-img-holder">
+                    <img src="images/maize.png" alt="વેચો">
+                </div>
+                <div class="card-main-info">
+                    <h3>વેચો</h3>
+                    <p>ઉત્પાદનો વેચો</p>
+                    <a href="my-listings.html" class="card-solid-action-btn">વેચો</a>
+                </div>
+            </div>
+
+            <div class="service-main-card">
+                <div class="card-img-holder">
+                    <img src="images/tractor.png" alt="ભાડે લો">
+                </div>
+                <div class="card-main-info">
+                    <h3>ભાડે લો</h3>
+                    <p>સાધનો ભાડે લો</p>
+                    <a href="rent.html" class="card-solid-action-btn">જુઓ</a>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

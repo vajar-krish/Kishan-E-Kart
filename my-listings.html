@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell - My Listings</title>
+    <link rel="icon" type="image/png" href="images/logo-small.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-logo">
+    <img src="images/logo.png" alt="Logo" class="logo-img">
+    <h2>KISHAN E-KART</h2>
+</div>
+        <div class="search-bar-container">
+            <input type="text" placeholder="Search for products...">
+            <button class="search-btn">🔍</button>
+        </div>
+        <nav class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="categories.html">Buy</a>
+            <a href="my-listings.html" class="active">Sell</a>
+            <a href="rent.html">Rent</a>
+        </nav>
+    </header>
+
+    <div class="layout-container">
+        <aside class="sidebar-menu">
+            <h3>My Account</h3>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="my-listings.html" class="active">My Listings</a></li>
+                <li><a href="add-listing.html">Add New Listing</a></li>
+                <li><a href="#">My Orders</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+        </aside>
+
+        <main class="content-area">
+            <div class="content-header">
+                <h2>My Listings</h2>
+                <a href="add-listing.html" class="add-new-btn">Add New Listing</a>
+            </div>
+
+            <div class="table-container">
+                <table class="listings-table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Status</th>
+                            <th>Views</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="listingsTableBody">
+                        <tr>
+                            <td>Wheat (10 Quintal)</td>
+                            <td>₹2,000</td>
+                            <td><span class="status-active">Active</span></td>
+                            <td>120</td>
+                            <td>
+                                <button class="edit-btn">Edit</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Paddy (8 Quintal)</td>
+                            <td>₹1,800</td>
+                            <td><span class="status-active">Active</span></td>
+                            <td>95</td>
+                            <td>
+                                <button class="edit-btn">Edit</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Tractor (For Rent)</td>
+                            <td>₹1,200 / day</td>
+                            <td><span class="status-active">Active</span></td>
+                            <td>60</td>
+                            <td>
+                                <button class="edit-btn">Edit</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

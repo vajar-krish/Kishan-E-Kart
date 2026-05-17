@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy - Products List</title>
+    <link rel="icon" type="image/png" href="images/logo-small.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+       <div class="header-logo">
+    <img src="images/logo.png" alt="Logo" class="logo-img">
+    <h2>KISHAN E-KART</h2>
+</div>
+        <div class="search-bar-container">
+            <input type="text" placeholder="Search for products...">
+            <button class="search-btn">🔍</button>
+        </div>
+        <nav class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="categories.html" class="active">Buy</a>
+            <a href="my-listings.html">Sell</a>
+            <a href="rent.html">Rent</a>
+        </nav>
+    </header>
+
+    <div class="layout-container">
+        <aside class="sidebar-menu">
+            <h3>Categories</h3>
+            <ul>
+                <li><a href="#" class="active">Seeds</a></li>
+                <li><a href="#">Fertilizers</a></li>
+                <li><a href="#">Pesticides</a></li>
+                <li><a href="#">Tools & Equipment</a></li>
+                <li><a href="#">Irrigation</a></li>
+                <li><a href="#">Organic Products</a></li>
+                <li><a href="#">Animal Care</a></li>
+                <li><a href="#">Other Products</a></li>
+            </ul>
+        </aside>
+
+        <main class="content-area">
+            <div class="content-header">
+                <h2>Seeds</h2>
+                <div class="filters">
+                    <select id="sortProducts">
+                        <option value="popular">Sort by: Popular</option>
+                        <option value="low">Price: Low to High</option>
+                        <option value="high">Price: High to Low</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="products-grid" id="productsContainer">
+                
+    <div class="product-card">
+        <div class="product-img-holder" style="background: none;">
+            <img src="images/wheat.png" alt="Wheat Seeds" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="product-info">
+            <a href="product-details.html?id=wheat" class="product-title">Wheat Seeds</a>
+            <p class="product-price">₹350 / kg</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Wheat Seeds', 350)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-img-holder" style="background: none;">
+            <img src="images/paddy.png" alt="Paddy Seeds" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="product-info">
+            <a href="#" class="product-title">Paddy Seeds</a>
+            <p class="product-price">₹400 / kg</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Paddy Seeds', 400)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-img-holder" style="background: none;">
+            <img src="images/maize.png" alt="Maize Seeds" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="product-info">
+            <a href="#" class="product-title">Maize Seeds</a>
+            <p class="product-price">₹380 / kg</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Maize Seeds', 380)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-img-holder" style="background: none;">
+            <img src="images/cotton.png" alt="Cotton Seeds" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="product-info">
+            <a href="#" class="product-title">Cotton Seeds</a>
+            <p class="product-price">₹600 / kg</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Cotton Seeds', 600)">Add to Cart</button>
+        </div>
+    </div>
+
+</div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

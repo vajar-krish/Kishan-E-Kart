@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy - Categories</title>
+    <link rel="icon" type="image/png" href="images/logo-small.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-logo">
+    <img src="images/logo.png" alt="Logo" class="logo-img">
+    <h2>KISHAN E-KART</h2>
+</div>
+        <div class="search-bar-container">
+            <input type="text" placeholder="Search for products...">
+            <button class="search-btn">🔍</button>
+        </div>
+        <nav class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="categories.html" class="active">Buy</a>
+            <a href="my-listings.html">Sell</a>
+            <a href="rent.html">Rent</a>
+        </nav>
+    </header>
+
+    <div class="layout-container">
+        <aside class="sidebar-menu">
+            <h3>Categories</h3>
+            <ul>
+                <li><a href="products.html?cat=seeds" class="active">Seeds</a></li>
+                <li><a href="#">Fertilizers</a></li>
+                <li><a href="#">Pesticides</a></li>
+                <li><a href="#">Tools & Equipment</a></li>
+                <li><a href="#">Irrigation</a></li>
+                <li><a href="#">Organic Products</a></li>
+                <li><a href="#">Animal Care</a></li>
+                <li><a href="#">Other Products</a></li>
+            </ul>
+        </aside>
+
+        <main class="content-area">
+            <h2 class="section-title">Shop by Categories</h2>
+            
+            <div class="categories-grid">
+                <a href="products.html?cat=seeds" class="category-box">
+                    <div class="img-box">🌱</div>
+                    <p>Seeds</p>
+                </a>
+                <div class="category-box">
+                    <div class="img-box">🧪</div>
+                    <p>Fertilizers</p>
+                </div>
+                <div class="category-box">
+                    <div class="img-box">🧴</div>
+                    <p>Pesticides</p>
+                </div>
+                <div class="category-box">
+                    <div class="img-box">🛠️</div>
+                    <p>Tools & Equipment</p>
+                </div>
+                <div class="category-box">
+                    <div class="img-box">💧</div>
+                    <p>Irrigation</p>
+                </div>
+                <div class="category-box">
+                    <div class="img-box">🍎</div>
+                    <p>Organic Products</p>
+                </div>
+                <div class="category-box">
+                    <div class="img-box">🐄</div>
+                    <p>Animal Care</p>
+                </div>
+                <div class="category-box">
+                    <div class="img-box">📦</div>
+                    <p>Other Products</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

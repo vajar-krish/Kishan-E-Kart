@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell - Add New Listing</title>
+    <link rel="icon" type="image/png" href="images/logo-small.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-logo">
+            <span class="icon">🌾</span>
+            <h2>KISHAN E-KART</h2>
+        </div>
+        <div class="search-bar-container">
+            <input type="text" placeholder="Search for products...">
+            <button class="search-btn">🔍</button>
+        </div>
+        <nav class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="categories.html">Buy</a>
+            <a href="my-listings.html" class="active">Sell</a>
+            <a href="rent.html">Rent</a>
+        </nav>
+    </header>
+
+    <div class="layout-container">
+        <aside class="sidebar-menu">
+            <h3>My Account</h3>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="my-listings.html">My Listings</a></li>
+                <li><a href="add-listing.html" class="active">Add New Listing</a></li>
+                <li><a href="#">My Orders</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+        </aside>
+
+        <main class="content-area">
+            <h2>Add New Listing</h2>
+            
+            <form id="addListingForm" class="listing-form">
+                <div class="form-grid">
+                    <div class="form-left">
+                        <div class="input-group">
+                            <label>Select Category</label>
+                            <select id="listCategory" required>
+                                <option value="">Select Category</option>
+                                <option value="seeds">Seeds</option>
+                                <option value="fertilizers">Fertilizers</option>
+                                <option value="machinery">Machinery/Tools</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Product Name</label>
+                            <input type="text" id="listName" placeholder="Enter product name" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Description</label>
+                            <textarea id="listDesc" rows="5" placeholder="Enter product description" required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-right">
+                        <div class="input-group">
+                            <label>Price</label>
+                            <input type="number" id="listPrice" placeholder="Enter price" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Unit</label>
+                            <select id="listUnit" required>
+                                <option value="">Select Unit</option>
+                                <option value="kg">per kg</option>
+                                <option value="quintal">per Quintal</option>
+                                <option value="day">per day (For Rent)</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Images</label>
+                            <input type="file" id="listImage">
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Listing</button>
+            </form>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
